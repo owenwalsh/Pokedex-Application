@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:id="@+id/action_bar"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+id/binocular_icon"
+        android:paddingRight="10dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
+        android:src="@drawable/target_pokemon"/>
+
+    <ImageButton
+        android:id="@+id/caught_icon"
+        android:paddingRight="10dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@id/binocular_icon"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
+        android:src="@drawable/caught_pokemon"/>
+
+    <ImageButton
+        android:id="@+id/speaker_icon"
+        android:paddingRight="10dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@id/caught_icon"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
+        android:src="@drawable/speaker_icon"/>
+
+</RelativeLayout>

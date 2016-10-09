@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pokemon_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+
+        <ImageView
+            android:id="@+id/pokemon_main_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/pokemon_main_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/pokemon_main_image"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pokemon_main_image"
+            android:layout_centerInParent="true" />
+
+        <include
+            android:id="@+id/desc_action_bar"
+            layout="@layout/action_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pokemon_name"
+            android:layout_centerInParent="true" />
+
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/desc_action_bar"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+        <TextView
+            android:id="@+id/basic_details"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/separator"
+            android:text="Basic Details" />
+
+        <LinearLayout
+            android:id="@+id/base_exp_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/basic_details">
+        <TextView
+            android:id="@+id/base_experience_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="15dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Base Experience" />
+
+        <TextView
+            android:id="@+id/pokemon_base_experience"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="49dp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/height_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/base_exp_layout">
+
+        <TextView
+            android:id="@+id/pokemon_height_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="15dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Height" />
+
+        <TextView
+            android:id="@+id/pokemon_height"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="143dp"
+            android:ellipsize="end"
+            android:maxLines="1"/> />
+            <TextView
+            android:id="@+id/pokemon_height_measure"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weight_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/height_layout">
+
+        <TextView
+            android:id="@+id/pokemon_weight_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="15dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Weight" />
+
+        <TextView
+            android:id="@+id/pokemon_weight"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="140dp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/pokemon_weight_measure"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="kg" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/weight_layout"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+
+        <TextView
+            android:id="@+id/type_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator1"
+            android:layout_centerInParent="true"
+            android:text="Type"/>
+
+
+        <ListView
+            android:id="@+id/pokemon_type"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/type_text"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/pokemon_type"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+
+        <TextView
+            android:id="@+id/abilties_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator2"
+            android:layout_centerInParent="true"
+            android:text="Abilities"/>
+
+        <ListView
+            android:id="@+id/pokemon_abilities"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abilties_text"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/pokemon_abilities"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+
+        <TextView
+            android:id="@+id/stats_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator3"
+            android:layout_centerInParent="true"
+            android:text="Stats"/>
+
+        <LinearLayout
+            android:id="@+id/stats_bar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats_text"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/stat_name"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/stat_base"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingLeft="60dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Base Points" />
+
+            <TextView
+                android:id="@+id/stat_effort_points"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingLeft="40dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Effort Points" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stats_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats_bar_layout"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/pokemon_stat_names"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pokemon_forms"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+
+            <ListView
+                android:id="@+id/pokemon_stats"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pokemon_forms"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/pokemon_stat_names"
+                android:layout_weight="1" />
+
+            <ListView
+                android:id="@+id/pokemon_stats_effort"
+                style="@style/list_editText_pokeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pokemon_forms"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/pokemon_stats"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator5"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/stats_layout"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+
+        <TextView
+            android:id="@+id/moves_text"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator5"
+            android:layout_centerInParent="true"
+            android:text="Moves"/>
+
+        <ListView
+            android:id="@+id/pokemon_moves"
+            style="@style/list_editText_pokeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/moves_text"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/separator6"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/pokemon_moves"
+            android:layout_centerVertical="true"
+            android:background="#B22222" />
+
+    </RelativeLayout>
+</ScrollView>
